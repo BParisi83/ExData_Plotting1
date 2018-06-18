@@ -14,10 +14,10 @@ Sub_metering_3 <- as.numeric(data2$Sub_metering_3)
 
 png("plot3.png")
 
-plot(xaxis, Sub_metering_1, xlab="", ylab="Engery Submetering")
-lines(xaxis, Sub_metering_2, type= "1", col ="red")
-lines(xaxis, Sub_metering_2, type = "1", col ="blue")
+plot(xaxis, Sub_metering_1,type="l", xlab="", ylab="Engery Submetering")
+lines(xaxis, Sub_metering_2, type="l", col ="red")
+lines(xaxis, Sub_metering_3,type="l", col ="blue")
 
-legend("topright", c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3"), lty=1, lwd=2.5, col=c("black", "red", "blue"))
+legend("topright", c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3"), lty=1, lwd=2, col=c("black", "red", "blue"))
 
 dev.off()
